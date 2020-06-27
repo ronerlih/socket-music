@@ -4,7 +4,7 @@
   height:20px; 
   border-radius: 30px;
   background-color: rgba(161, 205, 194, 0.612); 
-  /* animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; */
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 100px;

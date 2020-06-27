@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // sockets "routes"
-sockets(ioMessages)
+sockets(io)
 
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 module.exports = app;

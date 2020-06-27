@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./style.module.css";
-export default ({ position }) => 
+export default ({ dot }) => 
     <div 
         className={`${styles.dot} `}
         style={{
-            position: "absolute", 
-            top: `calc( ${position.y}px - 50px)`,
-            left: `calc( ${position.x}px - 10px)`
-        }} />
+            position: "absolute",
+            backgroundColor: dot.color,
+            top: `calc( ${dot.position.y}px - 40px)`,
+            left: dot.position.x
+        }} ></div>

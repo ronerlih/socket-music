@@ -4,25 +4,28 @@ import logo from './logo.svg';
 import './App.css';
 import API from './utils/API';
 import Dot from "./components/Dot"
+import audio from "./utils/sound";
 
 export default function App()  {
-  const [dot, setDot] = useState([]);
-  const [mousePosition, setMousePosition] = useState({x:0,y:0});
+  const [dot, setDot] = useState({position:{}, color:{}});
+  const [mousePosition, setMousePosition] = useState({x:200,y:200});
 
   const handleClick = e =>
     {
-      setMousePosition();
-      API.send({x: e.clientX, y: e.clientY}, confirmation => {console.log(confirmation)});
+      setMousePosition({x: e.clientX, y: e.clientY});
     }
-    API.socket.on('canvas', data => {console.log(data);setDot(data)});
-  
   
   useEffect(() => {
- 
+    API.socket.on('canvas', data => {
+      console.log(data);
+      setDot(data);
+      audio.play(data.position.y)
+    });
+    API.send(mousePosition, confirmation => {console.log(confirmation);audio.play(confirmation.position.y);setDot(confirmation)});
 
     // CLEAN UP THE EFFECT (disconnect)
     // return () => API.disconnect();
-  }, [])
+  }, [mousePosition])
 
   return (
     <>
@@ -33,7 +36,7 @@ export default function App()  {
         style={{position:"relative", width:"100%", minHeight: "calc(100vh - 40px)" }} 
         onClick={handleClick}
         >
-        <Dot position={dot} />
+        <Dot dot={dot} />
       </div>
     </>
   );

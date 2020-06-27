@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import API from './utils/API';
 import Dot from "./components/Dot"
-import audio from "./utils/sound";
+import audio from "./utils/tone";
 
 export default function App()  {
   const [dot, setDot] = useState({position:{}, color:{}});

@@ -5,7 +5,7 @@ const routes = require("./routes");
 const sockets = require("./routes/sockets");
 const socketIo = require('socket.io');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app);
 const io = socketIo(server); // SocketIO server

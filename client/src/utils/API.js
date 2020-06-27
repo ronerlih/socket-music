@@ -2,7 +2,7 @@ import io from 'socket.io-client';
 const ENDPOINT = 
     process.env.NODE_ENV === 'development'
         ? 'http://localhost:3001/'
-        : 'http://socket-music.herokuapp.com/';
+        : 'https://socket-music.herokuapp.com/';
 const socket = io(ENDPOINT);
 socket.on('connect', function(){console.log('connected')});
 socket.on('event', function(data){console.log(data)});

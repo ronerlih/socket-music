@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app);
 const io = socketIo(server); // SocketIO server
-const ioMessages = io.of('/messages');
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

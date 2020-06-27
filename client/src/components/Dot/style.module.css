@@ -1,0 +1,56 @@
+.dot{
+  position: absolute;
+  width:20px;  
+  height:20px; 
+  border-radius: 30px;
+  background-color: rgba(161, 205, 194, 0.612); 
+  /* animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 100px;
+  border:1px solid rgb(98, 98, 225);
+  text-align: center;
+}
+
+
+@keyframes shake {
+    
+    0%{
+        opacity: 0;
+        width:0px;
+        height:0px;
+        margin-left:0;
+      }
+    
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    50%{
+        opacity: 1;
+        width:30px;
+        height:30px;
+
+        margin-left:-15px;
+        margin-top:-15px;
+      }
+    
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+    100%{
+        opacity: 0;
+        width:0px;
+        margin-left:0;
+        height:0px;
+
+      }
+    
+  }

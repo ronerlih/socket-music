@@ -5,6 +5,5 @@ const synth = new Synth().toMaster();
 
 export default {
     play: yPosition => {
-        console.log(yPosition)
-        synth.triggerAttackRelease(parseInt(yPosition), "8n")}
+        synth.triggerAttackRelease((yPosition), "8n")}
 };

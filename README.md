@@ -4,7 +4,7 @@
 
 ## 🌎 [Live](https://socket-music.herokuapp.com/)
 
-![screenshot](client/public/screenshot.png)
+![screenshot](client/public/screenshot1.png)
 
 ### play together live on the page
 

@@ -2,6 +2,8 @@
 
 ## React-Socket.io sandbox
 
+## 🌎 [Live](https://socket-music.herokuapp.com/)
+
 ![screenshot](client/public/screenshot.png)
 
 ### play together live on the page

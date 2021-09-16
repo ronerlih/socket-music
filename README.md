@@ -1,5 +1,3 @@
-> Adapted demo from *nordic.js talk &mdash; building distributed systems, by James Simpson (@goldfire)* for use with a node.js cluster.
-> (https://goldfirestudios.com/nordic-js-building-distributed-systems)
 
 # socket-music
 
@@ -16,4 +14,7 @@
 
 ### Contributions are welcome!
 
-### Thanks, 
+### Thanks!
+> Adapted demo from *nordic.js talk &mdash; building distributed systems, by James Simpson (@goldfire)* for use with a node.js cluster.
+> (https://goldfirestudios.com/nordic-js-building-distributed-systems)
+
